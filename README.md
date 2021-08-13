@@ -1,2 +1,1 @@
-# algorithm_with_javascript
-알고리즘 with Javascript
+# Javascript로 알고리즘 풀기
