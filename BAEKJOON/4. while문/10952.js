@@ -1,22 +1,21 @@
 const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
-let input = fs.readFileSync(filePath).toString().split("\n");
+let input = fs.readFileSync(filePath).toString().trim().split("\n");
 
-console.log(input);
+let i = 0;
+let answer = "";
 
-const arr = [];
-for (let i = 0; i < input.length; i++) {
-  const tmp = input[i].split(" ").map((item) => +item);
-  arr.push({ A: tmp[0], B: tmp[1] });
-  if (tmp[0] === 0 && tmp[1] === 0) {
+while (i < input.length - 1) {
+  let A = Number(input[i].split(" ")[0]);
+  let B = Number(input[i].split(" ")[1]);
+
+  if (A !== 0 && B !== 0) {
+    answer += `${A + B}` + "\n";
+  } else {
     break;
   }
+
+  i++;
 }
 
-console.log(arr);
-
-// solution(input[0], input[1]);
-
-// function solution(a, b) {
-//   console.log(a * b);
-// }
+console.log(answer);
