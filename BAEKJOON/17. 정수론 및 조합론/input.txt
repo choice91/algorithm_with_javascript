@@ -1,4 +1,9 @@
+2
 3
-2 2
-1 5
-13 29
+hat headgear
+sunglasses eyewear
+turban headgear
+3
+mask face
+sunglasses face
+makeup face
