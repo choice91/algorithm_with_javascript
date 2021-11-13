@@ -6,10 +6,11 @@ const K = +input.shift();
 const result = [0];
 
 for (let i = 0; i < K; i++) {
-  if (input[i].trim() === "0") {
+  const value = parseInt(input[i]);
+  if (value === 0) {
     result.pop();
   } else {
-    result.push(parseInt(input[i].trim()));
+    result.push(value);
   }
 }
 
